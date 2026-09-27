@@ -8,23 +8,37 @@ CHOSEN_WM=$(cat /var/lib/sinix/setup_pending 2>/dev/null || echo "hyprland")
 
 foot bash -c "
     echo '==========================================================';
-    echo '        Hakuspace Installer                               ';
+    echo '        Sinix Linux - Hakuspace Installer                 ';
     echo '==========================================================';
+    echo 'Selected Environment: ${CHOSEN_WM}'
     echo 'Waiting for internet connection...';
-    until ping -c 1 google.com &>/dev/null; do sleep 1; done;
+    echo '----------------------------------------------------------';
     
+    until ping -c 1 google.com &>/dev/null; do 
+        sleep 1
+    done;
+    
+    echo 'Connection established! Cloning Hakuspace...';
     cd /tmp
-    git clone https://github.com/hakuimaku/hakuspace
+    rm -rf hakuspace
+    git clone https://github.com
     cd hakuspace
     
     chmod +x install.sh
+    
+    echo '----------------------------------------------------------';
+    echo 'Starting the official Hakuspace installer...';
+    echo 'Please follow the prompts on the screen to finish setup:';
+    echo '----------------------------------------------------------';
+    
     ./install.sh
     
-    # Limpeza pós-instalação bem-sucedida
     sudo rm -f /var/lib/sinix/setup_pending
     
     echo '';
-    echo '=== Done! Rebooting in 5 seconds ===';
+    echo '==========================================================';
+    echo '=== Done! Rebooting your system in 5 seconds...        ===';
+    echo '==========================================================';
     sleep 5;
     sudo reboot
 "
