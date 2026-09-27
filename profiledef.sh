@@ -12,9 +12,11 @@ bootmodes=('uefi-ia32.systemd-boot.esp' 'uefi-x64.systemd-boot.esp')
 arch="x86_64"
 pacman_conf="pacman.conf"
 
-# Define as permissões dentro do sistema de arquivos da ISO
 file_permissions=(
   ["/etc/shadow"]="0:0:400"
+  ["/etc/passwd"]="0:0:644"
+  ["/etc/group"]="0:0:644"
   ["/root"]="0:0:750"
   ["/etc/polkit-1/rules.d"]="0:0:750"
+  ["/etc/skel/.config/autostart-scripts/set-wallpaper.sh"]="0:0:755"
 )
