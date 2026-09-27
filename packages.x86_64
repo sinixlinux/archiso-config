@@ -1,5 +1,6 @@
 archlinux-keyring
 base
+base-devel
 linux
 linux-firmware
 mkinitcpio
@@ -25,3 +26,5 @@ fish
 foot
 rofi
 swaync
+ttf-jetbrains-mono
+lua
