@@ -1,4 +1,5 @@
 return {
+  hostname = "sinixiso"
   packages = {}
   dotfiles = {}
   services = {
