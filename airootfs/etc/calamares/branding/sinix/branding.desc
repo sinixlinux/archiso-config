@@ -1,0 +1,24 @@
+---
+componentName:  sinix
+
+strings:
+    productName:         Sinix Linux
+    shortProductName:    Sinix
+    version:             v1.0
+    shortVersion:        1
+    versionedName:       Sinix Linux v1.0
+    shortVersionedName:  Sinix v1.0
+    bootloaderEntryName: Sinix Linux
+    productUrl:          https://github.com/sinixlinux/sinix
+    supportUrl:          https://github.com/sinixlinux/sinix/issues
+
+images:
+    productLogo:         "logo.png"
+    productIcon:         "icon.png"
+    productWelcome:      "welcome.png"
+
+style:
+    SidebarBackground:        "#1e1e2e"
+    SidebarText:              "#cdd6f4"
+    SidebarTextCurrent:       "#89b4fa"
+    SidebarBackgroundCurrent: "#313244"
