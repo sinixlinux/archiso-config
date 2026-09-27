@@ -13,8 +13,8 @@ strings:
     supportUrl:          https://github.com/sinixlinux/sinix/issues
 
 images:
-    productLogo:         "logo.png"
-    productIcon:         "icon.png"
+    productLogo:         "logo2transparent.png"
+    productIcon:         "logo1transparent.png"
     productWelcome:      "welcome.png"
 
 style:
