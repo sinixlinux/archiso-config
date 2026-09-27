@@ -18,7 +18,7 @@ images:
     productWelcome:      "welcome.png"
 
 style:
-    SidebarBackground:        "#1e1e2e"
-    SidebarText:              "#cdd6f4"
-    SidebarTextCurrent:       "#89b4fa"
-    SidebarBackgroundCurrent: "#313244"
+    SidebarBackground:        "#111111"
+    SidebarText:              "#bbbbbb"
+    SidebarTextCurrent:       "#ffffff"
+    SidebarBackgroundCurrent: "#444444"
