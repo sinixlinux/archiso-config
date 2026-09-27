@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# Se o arquivo de pendência não existir, não faz nada (boots seguintes)
 if [ ! -f /var/lib/sinix/setup_pending ]; then
     exit 0
 fi
@@ -8,11 +7,9 @@ fi
 # Descobre a WM selecionada no Calamares
 CHOSEN_WM=$(cat /var/lib/sinix/setup_pending 2>/dev/null || echo "hyprland")
 
-# Dispara o terminal foot rodando o processo iterativo do git
-# Usamos o bash -c interno para manter o terminal preso na tela até o fim do script
 foot bash -c "
     echo '==========================================================';
-    echo '        INICIANDO INSTALADOR INTERATIVO HAKUSPACE         ';
+    echo '        Hakuspace Installer                               ';
     echo '==========================================================';
     echo 'Aguardando conexão com a internet...';
     until ping -c 1 github.com &>/dev/null; do sleep 1; done;
