@@ -35,4 +35,8 @@ plasma-desktop
 plasma-wayland-protocols
 kpipewire
 powerdevil
-bluedevi
+bluedevil
+eza
+direnv
+zoxide
+starship
