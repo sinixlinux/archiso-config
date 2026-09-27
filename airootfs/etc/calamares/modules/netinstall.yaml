@@ -1,0 +1,21 @@
+- name: "Window Managers (WMs)"
+  description: "Select the default interface for Sinix Linux"
+  critical: true
+  type: radio  # Permite escolher apenas um da lista
+  packages:
+    - name: "Hyprland"
+      description: "The crowd's baby. Massive documentation, tutorials, and focused on maximum eye-candy. Use if you don't care about RAM usage"
+      hidden: false
+      selected: true
+    - name: "Niri"
+      description: "Some people glaze it with their heart; Use the iconic scrolling layout and a easy KDL config syntax."
+      hidden: false
+      selected: false
+    - name: "LabWC"
+      description: "Openbox but it's Wayland (bad support with the dotfiles i guess?)"
+      hidden: false
+      selected: false
+    - name: "MangoWC"
+      description: "Get access to 10+ layouts and a incredibly lightweight and smooth desktop; Most underrated one in this list!"
+      hidden: false
+      selected: false
