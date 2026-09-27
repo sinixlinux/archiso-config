@@ -1,0 +1,58 @@
+if status is-login
+    if test (tty) = "/dev/tty1"
+        exec startplasma-wayland
+    end
+end
+
+if status is-interactive
+    # Starship custom prompt
+    command -v starship &> /dev/null && starship init fish | source
+
+    # Direnv + Zoxide
+    command -v direnv &> /dev/null && direnv hook fish | source
+    command -v zoxide &> /dev/null && zoxide init fish --cmd cd | source
+
+    # Better ls
+    command -v eza &> /dev/null && alias ls='eza --icons --group-directories-first -1'
+
+    # Path
+    fish_add_path ~/.local/bin
+    fish_add_path ~/.cargo/bin
+    fish_add_path ~/go/bin
+
+    # Env
+    set -gx GTK_USE_PORTAL 1
+    set -gx MOZ_ENABLE_WAYLAND 1
+    set -gx QT_QPA_PLATFORMTHEME qt6ct
+    set -gx DOTNET_ROOT $HOME/.dotnet
+
+    # Git tools
+    abbr lg 'lazygit'
+    abbr gd 'git diff'
+    abbr ga 'git add .'
+    abbr gc 'git commit -am'
+    abbr gl 'git log'
+    abbr gs 'git status'
+    abbr gst 'git stash'
+    abbr gsp 'git stash pop'
+    abbr gp 'git push'
+    abbr gpl 'git pull'
+    abbr gsw 'git switch'
+    abbr gsm 'git switch main'
+    abbr gb 'git branch'
+    abbr gbd 'git branch -d'
+    abbr gco 'git checkout'
+    abbr gsh 'git show'
+
+    # Lists, with eza
+    abbr l 'ls'
+    abbr ll 'ls -l'
+    abbr la 'ls -a'
+    abbr lla 'ls -la'
+
+    # Common commands
+    abbr c 'clear'
+    abbr h 'history'
+    abbr pacsize 'expac -H M "%m\t%n" $(\pacman -Qeq) | sort -h -r'
+    abbr pacsizefull 'expac -H M "%m\t%n" | sort -h -r'
+end
