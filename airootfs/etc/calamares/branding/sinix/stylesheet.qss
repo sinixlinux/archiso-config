@@ -1,0 +1,72 @@
+#mainApp {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: "monospace", "Noto Sans", sans-serif;
+}
+
+QLabel {
+    color: #ffffff;
+}
+
+#sidebarApp {
+    background-color: #0a0a0a;
+    border-right: 1px solid #262626;
+}
+
+QPushButton {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #262626;
+    border-radius: 4px;
+    padding: 6px 14px;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+}
+
+QPushButton:pressed {
+    background-color: #cccccc;
+    color: #000000;
+}
+
+QPushButton:disabled {
+    background-color: #0a0a0a;
+    color: #404040;
+    border: 1px solid #1a1a1a;
+}
+
+QLineEdit, QComboBox, QAbstractItemView {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #262626;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QProgressBar {
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 4px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+QProgressBar::chunk {
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+QToolTip {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #404040;
+}
