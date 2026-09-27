@@ -1,0 +1,15 @@
+#!/bin/sh
+
+SRC_DIR="/etc/sinix/"
+
+if [ "$EUID" -ne 0 ]; then
+        echo "ABORT: Run this as root or with sudo/doas."
+fi
+
+echo ":: Applying changes..."
+lua /etc/sinix/src/main.lua
+
+echo ":: Overwriting existing /etc/sinix/cfg link with ~/.config..."
+ln -sf /etc/sinix/cfg/ ~/.config
+
+echo ":)"
