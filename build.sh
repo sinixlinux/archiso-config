@@ -10,11 +10,6 @@ echo "[-+] Replacing old build artifacts..."
 sudo rm -rf "${WORK_DIR}"
 mkdir -p "${OUT_DIR}"
 
-echo "[-+] Copying baseline Archiso profile..."
-sudo rm -rf "${PROFILE_DIR}"
-# Copies the official baseline profile to our temporary compilation path
-cp -r /usr/share/archiso/configs/releng/ "${PROFILE_DIR}"
-
 echo "[+] Injecting Sinix Linux's package list..."
 # Append or overwrite the packages.x86_64 to include calamares and your WMs
 cp packages.x86_64 "${PROFILE_DIR}/packages.x86_64"
