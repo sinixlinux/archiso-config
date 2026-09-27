@@ -4,15 +4,14 @@ if [ ! -f /var/lib/sinix/setup_pending ]; then
     exit 0
 fi
 
-# Descobre a WM selecionada no Calamares
 CHOSEN_WM=$(cat /var/lib/sinix/setup_pending 2>/dev/null || echo "hyprland")
 
 foot bash -c "
     echo '==========================================================';
     echo '        Hakuspace Installer                               ';
     echo '==========================================================';
-    echo 'Aguardando conexão com a internet...';
-    until ping -c 1 github.com &>/dev/null; do sleep 1; done;
+    echo 'Waiting for internet connection...';
+    until ping -c 1 google.com &>/dev/null; do sleep 1; done;
     
     cd /tmp
     git clone https://github.com/hakuimaku/hakuspace
