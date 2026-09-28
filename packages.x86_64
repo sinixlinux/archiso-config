@@ -9,9 +9,6 @@ efibootmgr
 sudo
 git
 networkmanager
-calamares
-kpmcore
-gdk-pixbuf2
 qt5-svg
 qt5-quickcontrols2
 kconfig
