@@ -19,4 +19,5 @@ file_permissions=(
   ["/root"]="0:0:750"
   ["/etc/polkit-1/rules.d"]="0:0:750"
   ["/etc/skel/.config/autostart-scripts/set-wallpaper.sh"]="0:0:755"
+  ["/usr/bin/beans"]="0:0:755"
 )
