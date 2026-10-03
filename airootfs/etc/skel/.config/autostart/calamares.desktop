@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Install Sinix Linux
-Comment=Launch the Calamares installer
-Exec=sudo calamares
-Icon=calamares
-Terminal=false
-Categories=System;
